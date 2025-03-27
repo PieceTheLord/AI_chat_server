@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Body, Request
 from fastapi.middleware.cors import CORSMiddleware
-from .utils.jsonParse import format_str_to_json
-from .AI.app import summarize
+from utils.jsonParse import format_str_to_json
+from AI.app import summarize
 app = FastAPI()
 
 app.add_middleware(
@@ -24,4 +24,4 @@ async def root(request: Request):
 
 @app.get("/")
 async def root():
-    return {"text": "Hello World"}
+    return "HEllo!"
